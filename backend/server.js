@@ -1,9 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const Food = require('./models/Food');
+const Food = require('./models/food');
 const connectDB = require('./configration/db'); // ✅ Configured Database Connection
-const Order = require('./models/Order');
+const Order = require('./models/order');
 
 // --- (User Model dynamically created for safety) ---
 const mongoose = require('mongoose');
