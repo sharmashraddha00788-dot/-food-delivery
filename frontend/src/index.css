@@ -1,0 +1,41 @@
+/* Dark Red & Clean White Space Theme */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: #090202; /* Extremely Dark Crimson Black */
+  color: #f3f4f6; /* Clean Off-White Text */
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Background Video container */
+.bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  object-fit: cover;
+  opacity: 0.25; /* Video soft dikhegi taaki text clear rhey */
+}
+
+/* Custom Red Neon Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090202;
+}
+::-webkit-scrollbar-thumb {
+  background: #ef4444; /* Neon Crimson Red */
+  border-radius: 4px;
+}
+
+/* Glowing Red Neon Text Effect */
+.neon-text {
+  text-shadow: 0 0 10px #ef4444, 0 0 20px #ef4444;
+  color: #fff;
+}
