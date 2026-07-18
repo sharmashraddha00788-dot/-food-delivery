@@ -319,7 +319,7 @@ const Cart = ({ cartItems, onAddToCart, onDecreaseCart, onRemoveItem, onClearCar
     const handleCheckout = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/orders', { customerName: name, address, items: cartItems, totalAmount });
+          await axios.post('http://localhost:5000/api/orders', { customerName: name, address, items: cartItems, totalAmount })
             setIsOrdered(true);
             onClearCart();
         } catch (error) {
