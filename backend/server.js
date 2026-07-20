@@ -151,7 +151,7 @@ app.get('/api/food', async (req, res) => {
     }
 });
 
-// 6. Place a New Order
+// 6. Place a New Order 
 app.post('/api/orders', async (req, res) => {
     try {
         const { customerName, address, items, totalAmount } = req.body;
@@ -165,4 +165,3 @@ app.post('/api/orders', async (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT} 🚀`));
-
