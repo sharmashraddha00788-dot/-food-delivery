@@ -319,7 +319,7 @@ const Cart = ({ cartItems, onAddToCart, onDecreaseCart, onRemoveItem, onClearCar
     const handleCheckout = async (e) => {
         e.preventDefault();
         try {
-          await axios.post('http://localhost:5000/api/orders', { customerName: name, address, items: cartItems, totalAmount })
+          await axios.post('https://food-delivery-xfov.onrender.com/api/orders', { customerName: name, address, items: cartItems, totalAmount })
             setIsOrdered(true);
             onClearCart();
         } catch (error) {
@@ -385,7 +385,7 @@ const AuthForm = ({ mode, onAuthSuccess }) => {
         const endpoint = isLogin ? 'login' : 'signup';
         const payload = isLogin ? { email, password } : { name, email, password };
         try {
-            const res = await axios.post(`http://localhost:5000/api/${endpoint}`, payload);
+            const res = await axios.post(`https://food-delivery-xfov.onrender.com/api/${endpoint}`, payload);
             alert(res.data.message);
             if (isLogin) {
                 onAuthSuccess(res.data.user);
@@ -425,7 +425,7 @@ export default function App() {
     useEffect(() => {
         injectGlobalStyles();
         if (user) {
-            axios.get('http://localhost:5000/api/food')
+            axios.get('https://food-delivery-xfov.onrender.com/api/food')
                 .then(res => setFoods(res.data))
                 .catch(err => console.error("Database Connection Error:", err));
         }
